@@ -1,0 +1,16 @@
+<div class="modal-dialog <?php if(isset($this->class_attr2)) { echo $this->class_attr2; } ?>">
+	<div class="modal-content clearfix">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" title="<?php echo $this->translate('Close'); ?>">&times;</button>
+			<h4 class="modal-title" title="<?php if(isset($this->tool_tip)) { echo $this->tool_tip; } ?>"><?php echo $this->translate($this->title); ?></h4>
+		</div>
+		
+			 <?php echo $this->content; ?>
+		
+	</div>
+</div>
+<script>
+$(document).ready(function(){   
+       $('.modal-body input[type=text]:first').focus();    
+});
+</script>
