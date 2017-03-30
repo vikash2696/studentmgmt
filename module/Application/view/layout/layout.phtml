@@ -18,14 +18,15 @@
                         ->prependStylesheet($this->basePath() . '/css/plugins/morris.css')
                         ->prependStylesheet($this->basePath() . '/css/sb-admin.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css'); ?>
-
+<!--  -->
         <!-- Scripts -->
         <?php echo $this->headScript()
             ->prependFile($this->basePath() . '/js/bootstrap.min.js')
-            ->prependFile($this->basePath() . '/js/jquery.min.js')
             ->prependFile($this->basePath() . '/js/plugins/morris/raphael.min.js')
             ->prependFile($this->basePath() . '/js/plugins/morris/morris.min.js')
             ->prependFile($this->basePath() . '/js/plugins/morris/morris-data.js')
+            ->prependFile($this->basePath() . '/js/student.js')
+            ->prependFile($this->basePath() . '/js/jquery.min.js')
             ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
             ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
         ; ?>
@@ -152,36 +153,26 @@
                         <a href="<?php echo $this->url('home') ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo $this->url('student') ?>"><i class="fa fa-fw fa-bar-chart-o"></i>Student</a>
+                        <a href="<?php echo $this->url('student') ?>"><i class="fa fa-fw fa-bar-chart-o"></i> Student</a>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
+                        <a href="<?php echo $this->url('professor') ?>"><i class="fa fa-fw fa-table"></i> Professor</a>
                     </li>
                     <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                        <a href="<?php echo $this->url('attendence') ?>"><i class="fa fa-fw fa-edit"></i> Attendence</a>
+                    </li>
+                     <li>
+                        <a href="<?php echo $this->url('assignment') ?>"><i class="fa fa-fw fa-file"></i> Assignments</a>
                     </li>
                     <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
+                        <a href="<?php echo $this->url('examination') ?>"><i class="fa fa-fw fa-desktop"></i> Examination</a>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                        <a href="<?php echo $this->url('event') ?>"><i class="fa fa-fw fa-wrench"></i> Events</a>
                     </li>
+                   
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                        <a href="<?php echo $this->url('alumni') ?>"><i class="fa fa-fw fa-dashboard"></i> Alumni</a>
                     </li>
                 </ul>
             </div>

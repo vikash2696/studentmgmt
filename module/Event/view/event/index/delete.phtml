@@ -1,0 +1,21 @@
+ <?php
+ $title = 'Delete Task Type';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($this->translate($title)); ?></h1>
+
+ <p><?php echo $this->translate("Are you sure that you want to delete").$this->escapeHtml($tasktype->task_type_name); ?>
+ </p>
+ <?php
+ $url = $this->url('tasktype', array(
+     'action' => 'delete',
+     'id'     => $this->id,
+ ));
+ ?>
+ <form action="<?php echo $url; ?>" method="post">
+ <div>
+     <input type="hidden" name="id" value="<?php echo (int) $tasktype->id; ?>" />
+     <input type="submit" name="del" value="Yes" />
+     <input type="submit" name="del" value="No" />
+ </div>
+ </form>

@@ -9,9 +9,9 @@
         <div class="col-lg-12">
             <h1 class="page-header">
                 Student <small>Statistics Overview</small>
-          
-                  <button type="button" id="addStudent" class="btn btn-primary" style="float: right;">
-                <?php echo $this->translate('Add New ');?>+</button>
+           <a href="<?php echo $this->url('student', array('action'=>'addStudent'));?>"data-toggle="modal" data-target="#modelDialog" data-backdrop="static">
+                  <button type="button" class="btn btn-primary" style="float: right;">
+                <?php echo $this->translate('Add New ');?>+</button></a>
             </h1>
         </div>
     </div>
