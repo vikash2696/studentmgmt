@@ -19,8 +19,6 @@ class IndexController extends AbstractActionController
         $sm = $this->getServiceLocator();
         $topicsTable = $sm->get('Application\Model\TopicsTable');
         $listTopics = $topicsTable->getCollectionList();
-        // echo "<pre>";
-        // print_r($listTopics); 
         return new ViewModel(array(
             'listTopics' =>  $listTopics,     
         ));

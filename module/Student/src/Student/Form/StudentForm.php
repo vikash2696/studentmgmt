@@ -26,18 +26,6 @@ class StudentForm extends Form
                 'id' => 'task_type_name'
                 )
         ));
-//         $this->add(array(
-//             'type' => 'Zend\Form\Element\Checkbox',
-//             'name' => 'approval_required',
-//             'options' => array(
-        
-        
-//             ),
-//             'attributes' => array(
-//                 'id' => 'approval_required',
-//                 'checked' => true,
-//             )
-//         ));
         
         $add = new Element\Button('add');
         $add->setLabel('Submit')
