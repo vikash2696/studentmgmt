@@ -19,6 +19,7 @@ namespace Student\Model;
          $this->user_id = (!empty($data['user_id'])) ? $data['user_id'] : null;
          $this->email = (!empty($data['email'])) ? $data['email'] : null;
          $this->first_name = (!empty($data['first_name'])) ? $data['first_name'] : null;
+         // $this->total = (!empty($data['total'])) ? $data['total'] : null;
      }
      public function setInputFilter(InputFilterInterface $inputFilter)
      {
@@ -33,10 +34,10 @@ namespace Student\Model;
              $inputFilter = new InputFilter();
 
              $inputFilter->add(array(
-                 'first_name'     => 'id',
+                 'name'     => 'id',
                  'required' => true,
                  'filters'  => array(
-                     array('first_name' => 'Int'),
+                     array('name' => 'Int'),
                  ),
              ));
 

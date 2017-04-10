@@ -16,16 +16,28 @@ class StudentForm extends Form
             'type' => 'Hidden'
         ));
         $this->add(array(
-            'name' => 's_name',
+            'name' => 'task_type_name',
             'type' => 'Text',
             'options' => array(
-                'label' => 'Name'
+                'label' => 'Task Type Name'
             ),
             'attributes' => array(
                 'class'=> 'form-control',
-                'id' => 's_name'
+                'id' => 'task_type_name'
                 )
         ));
+//         $this->add(array(
+//             'type' => 'Zend\Form\Element\Checkbox',
+//             'name' => 'approval_required',
+//             'options' => array(
+        
+        
+//             ),
+//             'attributes' => array(
+//                 'id' => 'approval_required',
+//                 'checked' => true,
+//             )
+//         ));
         
         $add = new Element\Button('add');
         $add->setLabel('Submit')
