@@ -39,6 +39,7 @@ class StudentTable
        try {
             if ($id == 0) {
                $this->tableGateway->insert($data);
+               return false;
             } 
         /*    else {
                if ($this->getTasktype($id)) {

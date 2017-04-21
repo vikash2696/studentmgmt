@@ -12,9 +12,6 @@ $(document).on("click", '#addStudent', function() {
  $(document).on("click", '#cancel_add_std_btn', function() {
 	$.ajax({
 		url: "student",
-		data: { 
-		    cancel_btn: 1, 
-		  },
 		method: "GET",
 		success: function(data){
 			$(".container-fluid").html(data);
@@ -30,8 +27,13 @@ $(document).on("click", '#addStudent', function() {
 		method: "POST",
 		dataType: "json",
 		success: function(data){
-			// return false;
-			$(".container-fluid").html(data);
+			$.ajax({
+				url: "student",
+				method: "GET",
+				success: function(data){
+					$(".container-fluid").html(data);
+				}
+			});
 		}
 	});
 });
