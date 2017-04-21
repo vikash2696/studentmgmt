@@ -26,22 +26,44 @@ class StudentForm extends Form
                 'id' => 's_name'
                 )
         ));
+        $this->add(array(
+            'name' => 's_email',
+            'type' => 'Text',
+            'options' => array(
+                'label' => 'Email'
+            ),
+            'attributes' => array(
+                'class'=> 'form-control',
+                'id' => 's_email'
+                )
+        ));
+         $this->add(array(
+            'name' => 'user_id',
+            'type' => 'Text',
+            'options' => array(
+                'label' => 'User Name'
+            ),
+            'attributes' => array(
+                'class'=> 'form-control',
+                'id' => 'user_id'
+                )
+        ));
         
         $add = new Element\Button('add');
         $add->setLabel('Submit')
             ->setValue('Submit')
             ->setName('add')
-            ->setAttribute('id', 'submitbutton')
+            ->setAttribute('id', 'student_add_btn')
             ->setAttribute('class', 'btn btn-default text-uppercase action-btn')
-            ->setAttribute('type', 'submit');
+            ->setAttribute('type', 'button');
         $this->add($add);
 
         $cancel = new Element\Button('cancel');
         $cancel->setLabel("cancel")
         ->setValue('cancel')
         ->setName('cancel')
+        ->setAttribute('id', 'cancel_add_std_btn')
         ->setAttribute('class', 'btn btn-default text-uppercase action-btn')
-        ->setAttribute('data-dismiss', 'modal')
         ->setAttribute('type', 'button');
         $this->add($cancel);
     }

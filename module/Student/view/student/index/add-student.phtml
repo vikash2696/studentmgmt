@@ -1,0 +1,39 @@
+ <?php
+ $form->setAttribute('action', $this->url('student', array('action' => 'addStudent','class'=>'clearfix clear')));
+ $form = $this->form;
+ $form->prepare();
+ echo $this->form()->openTag($form);
+ echo $this->formHidden($form->get('id'));
+ ?> 
+ <div class="modal-body">
+     <div class="form-group">
+            <?php
+            echo $this->translate($this->formlabel($form->get('s_name')));
+            echo $this->formelement($form->get('s_name'));
+            echo $this->formElementErrors($form->get('s_name'));
+            ?>
+     </div>
+     <div class="form-group">
+            <?php
+            echo $this->translate($this->formlabel($form->get('s_email')));
+            echo $this->formelement($form->get('s_email'));
+            echo $this->formElementErrors($form->get('s_email'));
+            ?>
+     </div>
+     <div class="form-group">
+            <?php
+            echo $this->translate($this->formlabel($form->get('user_id')));
+            echo $this->formelement($form->get('user_id'));
+            echo $this->formElementErrors($form->get('user_id'));
+            ?>
+     </div>
+</div>
+<div class="modal-footer">
+    <?php  echo $this->formelement($form->get('add')); ?>&nbsp;
+    <?php  echo $this->formelement($form->get('cancel')->setLabel($this->translate("Cancel")));?>
+</div>        
+ 
+<!-- hiddden field for URL -->
+  
+<?php echo $this->form()->closeTag(); ?>
+ 

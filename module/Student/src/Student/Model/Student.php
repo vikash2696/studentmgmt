@@ -11,14 +11,14 @@ namespace Student\Model;
      public $user_id;
 //      public $approval_required;
      public $email;
-     public $first_name;
+     public $s_name;
 
      public function exchangeArray($data)
      {
          $this->id     = (!empty($data['id'])) ? $data['id'] : null;
          $this->user_id = (!empty($data['user_id'])) ? $data['user_id'] : null;
          $this->email = (!empty($data['email'])) ? $data['email'] : null;
-         $this->first_name = (!empty($data['first_name'])) ? $data['first_name'] : null;
+         $this->s_name = (!empty($data['first_name'])) ? $data['first_name'] : null;
      }
      public function setInputFilter(InputFilterInterface $inputFilter)
      {

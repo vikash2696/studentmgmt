@@ -38,3 +38,7 @@ div.container a.brand {
 .right-shift{
 	float:right;	
 }
+.navbar{
+  float: left;
+    overflow: hidden;
+}

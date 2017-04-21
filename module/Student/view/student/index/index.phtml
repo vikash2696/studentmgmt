@@ -1,5 +1,5 @@
 <?php
- $title = 'List Task Types';
+ $title = 'Student List';
  $this->headTitle($title);
  ?>
 <!-- Main Content --> 
@@ -29,7 +29,7 @@
             <?php foreach($this->listStudent as $key => $val) {?>
                 <tr>
                     <td><?php echo $val['user_id']; ?></td>
-                    <td><?php echo $val['first_name']; ?></td>
+                    <td><?php echo $val['s_name']; ?></td>
                     <td><?php echo $val['email']; ?></td>
                     <td>Edit</td>
                 </tr>
